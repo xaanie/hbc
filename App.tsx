@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GradeLevel, Term, Subject, UserInput, SchemeOfWork } from './types';
-import { generateSubjectScheme } from './services/geminiService';
+import { generateSubjectScheme } from './services/geminiService.ts';
 import generatePDF from "./utils/pdfGenerator";
 import LoadingSpinner from './components/LoadingSpinner';
 import LandingPage from './components/LandingPage';
