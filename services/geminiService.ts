@@ -2,7 +2,10 @@ import { GoogleGenAI } from "@google/genai";
 import { UserInput, Subject, SchemeOfWork, SchemeEntry, LessonInput, LessonPlan, FlashcardInput, FlashcardSet, AssessmentInput, Assessment, AssessmentType, ExamInput, ExamPaper } from "../types";
 import { getSyllabusForGrade } from "../data/syllabusContext";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY
+});
+
 
 // --- Scheme Generator Logic ---
 export const generateSubjectScheme = async (
